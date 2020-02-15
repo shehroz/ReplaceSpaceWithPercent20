@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algorithms
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string input = "abcd efg nfn ";
+            Console.WriteLine("Replace space in string :["+ input+"] as [" + ReplaceSpaceWithPercentage20(input)+"]");
+            Console.ReadKey();
+
+        }
+
+        public static string ReplaceSpaceWithPercentage20(string str)
+        {
+            StringBuilder stFinal = new StringBuilder();
+            for (int i = 0; i < str.Length; i++)
+            {
+
+                if (str[i] == ' ')
+                {
+                    stFinal.Append("%20");
+                }
+                else
+                {
+                    stFinal.Append(str[i]);
+                }
+
+            }
+            return stFinal.ToString();
+        }
+    }
+}
